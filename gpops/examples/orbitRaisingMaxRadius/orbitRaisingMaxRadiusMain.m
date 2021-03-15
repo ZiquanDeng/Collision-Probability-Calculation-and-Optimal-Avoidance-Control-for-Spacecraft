@@ -1,0 +1,71 @@
+global CONSTANTS
+
+r0 = 1;
+theta0 = 0;
+vr0 = 0;
+vtheta0 = 1;
+vrf = 0;
+CONSTANTS.m0 = 1;
+CONSTANTS.T  = 0.1405;
+CONSTANTS.mu = 1; 
+CONSTANTS.mdot = 0.0749;
+
+t0 = 0;
+tf = 3.32;
+rmin = 0.5;
+rmax = 2;
+thetamin = 0;
+thetamax = 2*pi;
+vrmin = 0;
+vrmax = 1;
+vthetamin = 0.5;
+vthetamax = 1.5;
+m0 = CONSTANTS.m0;
+mmax = m0;
+mmin = 0.1;
+
+% Phase 1 Information
+iphase = 1;
+limits(iphase).time.min = [t0 tf];
+limits(iphase).time.max = [t0 tf];
+limits(iphase).state.min(1,:) = [r0 rmin rmin];
+limits(iphase).state.max(1,:) = [r0 rmax rmax];
+limits(iphase).state.min(2,:) = [theta0 thetamin thetamin];
+limits(iphase).state.max(2,:) = [theta0 thetamax thetamax];
+limits(iphase).state.min(3,:) = [vr0 vrmin vrf];
+limits(iphase).state.max(3,:) = [vr0 vrmax vrf];
+limits(iphase).state.min(4,:) = [vtheta0 vthetamin vthetamin];
+limits(iphase).state.max(4,:) = [vtheta0 vthetamax vthetamax];
+limits(iphase).control.min(1,:) = -10;
+limits(iphase).control.max(1,:) =  10;
+limits(iphase).control.min(2,:) = -10;
+limits(iphase).control.max(2,:) =  10;
+limits(iphase).parameter.min =  -10;
+limits(iphase).parameter.max =  10;
+limits(iphase).path.min = 1;
+limits(iphase).path.max = 1;
+limits(iphase).event.min = [0; 0];
+limits(iphase).event.max = [0; 0];
+guess(iphase).time = [t0; tf];
+guess(iphase).state(:,1) = [r0; rmax];
+guess(iphase).state(:,2) = [theta0; thetamax];
+guess(iphase).state(:,3) = [vr0; vrf];
+guess(iphase).state(:,4) = [vtheta0; vthetamax];
+guess(iphase).control(:,1) = [1; 1];
+guess(iphase).control(:,2) = [0; 0];
+guess(iphase).parameter = 0;
+
+linkages = [];
+setup.name  = 'Orbit-Raising-Maximum-Radius-Problem';
+setup.funcs.cost = 'orbitRaisingMaxRadiusCost';
+setup.funcs.dae = 'orbitRaisingMaxRadiusDae';
+setup.funcs.event = 'orbitRaisingMaxRadiusEvent';
+setup.autoscale = 'off';
+setup.mesh.tolerance = 1e-7;
+setup.mesh.iteration = 20;
+setup.derivatives = 'automatic-intlab';
+setup.limits = limits;
+setup.guess = guess;
+setup.linkages = linkages;
+[output,gpopsHistory] = gpops(setup);
+solution = output.solution;

@@ -1,0 +1,27 @@
+-------------------------
+README.EXAMPLES for GPOPS
+-------------------------
+
+Currently, the following examples, all taken from the open literature,
+of varying complexity have been coded completely using GPOPS.
+These examples are as follows: 
+
+brysonDenham:          Classical Bryson-Denham problem
+brysonMaxrange:        Classical Bryson maximum range problem
+catalystMixing:        Catalyst mixing problem
+chemicalProcess:       Chemical Process problem
+goddardRocket:         Goddard Rocket maximum ascent problem
+hyperSensitive:        One-dimensional optimal control problem
+leeBioractor:          Lee-Ramirez bioreactor problem
+launch:                Multiple-stage launch vehicle ascent problem
+linearTangentSteering: Linear tangent steering problem
+minimumClimb:          Minimum time-to-climb of a supersonic aircraft
+moonLander:            One-dimensional moon lander problem
+rlvEntry:              Reusable Launch Vehicle maximum crossrange entry problem
+robotArm:              Minimum time reconfiguration of a robot arm
+
+If you create examples that you would like to share with the author
+for inclusion in the GPOPS example library, please send them to the
+author at anilvrao@gmail.com.  Anyone who creates a new example for 
+inclusion in the distribution will be given an acknowledgment in 
+future releases of GPOPS and will be given an appropriate citation.

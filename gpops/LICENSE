@@ -1,0 +1,156 @@
+%------------------------------------------------------------------%
+%!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!%
+% THIS NOTICE MAY NOT BE DELETED UNDER CIRCUMSTANCES DURING ANY    %
+% EXECUTION OF THE GPOPS SOFTWARE OR TRANSMITTAL OF GPOPS OR ANY   %
+% DOCUMENTATION ASSOCIATED WITH GPOPS                              %
+%!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!%
+%------------------------------------------------------------------%
+% GPOPS Copyright (c) Anil V. Rao, Geoffrey T. Huntington, David   %
+% Benson, Michael Patterson, Christopher Darby, and                %
+% Camila Francolin                                                 %
+%------------------------------------------------------------------%
+%                                                                  %
+%------------------------------------------------------------------%
+% PLEASE READ THE FOLLOWING LICENSE AGREEMENT CAREFULLY.           %
+%------------------------------------------------------------------%
+%                                                                  %
+% By downloading, using, modifying, or distributing GPOPS, you     % 
+% to the terms of this license agreement.  Your agreement with     %
+% this license gives you extremely GENEROUS RIGHTS, so if you do   %
+% not agree to the terms of this agreement, you may not proceed    %
+% further with using, using, modifying, or distributing GPOPS,     % 
+%                                                                  %
+% License for GPOPS Software (Based on the Simple Public License)  %
+%                                                                  %
+% This is a license for the software Gauss Pseudospectral Optimal  %
+% Control Software (GPOPS).  The license for GPOPS is based on the %
+% Simple Public License.  In the same spirit as the Simple Public  %
+% License, the language for the GPOPS License is similar to that   %
+% of GPL 2.0.  The words are different, but the goal is the same:  %
+% to guarantee for all users the freedom to share and change       %
+% software.  If anyone wonders about the meaning of the GPOPS      %
+% License, they should interpret it as consistent with GPL 2.0.    %
+%                                                                  %
+% LICENSE FOR GPOPS                                                %
+% The GPOPS License applies to the software's source and object    %
+% code and comes with any rights that I have in it (other than     %
+% trademarks). You agree to the GPOPS License simply by            %
+% downloading, copying, distributing, or making a derivative work  %
+% of the software.                                                 %
+%                                                                  %
+% You get the royalty-free right to:                               %
+%                                                                  % 
+%     * Use the software for any purpose;                          %
+%     * Make derivative works of it (this is called a              %
+%      "Derived Work");                                            %
+%     * Copy and distribute it and any Derived Work.               %
+%                                                                  %
+% If you distribute the software or a Derived Work, you must give  %
+% back to the community by:                                        %
+%                                                                  %
+%     * Prominently noting the date of any changes you make;       %
+%     * Leaving other people's copyright notices, warranty         %
+%       disclaimers, and license terms  in place;                  %
+%     * Providing the source code, build scripts, installation     %
+%       scripts, and interface definitions in a form that is easy  % 
+%       to get and best to modify;                                 %
+%     * Licensing it to everyone under SimPL, or substantially     %
+%       similar terms (such as GPL 2.0), without adding further    %
+%       restrictions to the rights provided;                       %
+%     * Conspicuously announcing that it is available under        %
+%       that license.                                              %
+%                                                                  % 
+% Restrictions for Use and Distribution of GPOPS:                  %
+%     * GPOPS is a completely FREE software both for use and for   %
+%       redistribution.  Furthermore, while it may be used within  %
+%       commercial organizations, it is not for sale or resale     %
+%     * The only exception to the sales restriction above is that  %
+%       GPOPS may be included as a part of a free open-source      %
+%       software such as Linux operating systems.  When            %
+%       distributing GPOPS with free operating systems, no fee     %
+%       beyond the price of the operating system itself may be     %
+%       added (i.e., you cannot profit from the redistribution of  %
+%       GPOPS).                                                    %
+%     * GPOPS is not for commercial use with the exception that it %
+%       may be used by commercial organizations for internal       %
+%       research and development.  Any use of GPOPS by commercial  %
+%       organizations that involve the presentation of results for %
+%       profit-making purposes is strictly prohibited.             %
+%                                                                  %
+% There are some things that you must shoulder:                    %
+%                                                                  %
+%     * You get NO WARRANTIES. None of any kind;                   %
+%     * If the software damages you in any way, you may only       %
+%       recover direct damages up to the amount you paid for it    %
+%       (that is zero if you did not pay anything). You may not    %
+%       recover any other damages, including those called          %
+%       "consequential damages." (The state or country where you   %
+%       live may not allow you to limit your liability in this     %
+%       way, so this may not apply to you);                        %
+%                                                                  % 
+% The GPOPS License continues perpetually, except that your        %
+% license rights end automatically if:                             %
+%                                                                  %
+%     * You do not abide by the "give back to the community" terms %
+%       (your licensees get to keep their rights if they abide);   %
+%     * Anyone prevents you from distributing the software under   %
+%       the terms of the SimPL.                                    %
+%     * You sell the software in any manner with the one exception %
+%       listed above.                                              %
+%                                                                  %
+% THE GPOPS LICENSE IS NOT THE SIMPL, BUT IS BASED ON THE SIMPL    %
+%                                                                  %
+% In addition, to the license given above, the following is a      %
+% condition of using or modifying the GPOPS softare in any manner: %
+%                                                                  %
+% The authors also request that the following documents be cited   %
+% in any publication where GPOPS was used to obtain the results    %
+%                                                                  %
+%   [1] Rao, A. V., Benson, D. A., Darby, C. L., Patterson, M. A., %
+%       Francolin, C., Sanders, I., and Huntington, G. T.,         %
+        "Algorithm 902:  GPOPS, A MATLAB Software for Solving      %
+         Multiple-Phase Optimal Control Problems Using the Gauss   %
+%        Pseudospectral Method," ACM Transactions on Mathematical  %
+         Software, Vol. 37, No. 2, April-June, 2010, Article 22,   %
+%        39 pages.                                                 %
+%   [2] Benson, D. A., Huntington, G. T., Thorvaldsen, T. P.,      %
+%       and Rao, A. V., "Direct Trajectory Optimization and        %
+%       Costate Estimation via an Orthogonal Collocation Method,   %
+%       Journal of Guidance, Control, and Dynamics, Vol. 29,       %
+%       No. 6, November-December 2006, pp. 1435-1440.              %
+%                                                                  %
+%   [3] Garg, D., Patterson, M. A., Darby, C. L., Francolin, C.,   %
+%       Huntington, G. T., Hager, W. W., and Rao, A. V., "Direct   %
+%       Trajectory Optimization and Costate Estimation of          %
+%       Finite-Horizon and Infinite-Horizon Optimal Control        %
+%       Problems Using a Radau Pseudospectral Method,"             %
+%       Computational Optimization and Applications, Vol. 49,      %
+%       No. 2, June 2011, pp. 335-358.                             %
+%                                                                  %
+%   [4] Benson, D. A., and Huntington, G. T., "A Unified Framework %
+%        for the Numerical Solution of Optimal Control Problems    %
+%       Using Pseudospectral Methods," Automatica, Vol. 46, No. 11 %
+%       November 2010, pp. 1843-1851.                              %
+%                                                                  %
+%   [5] Garg, D., Patterson, M. A., Hager, W. W., Rao, A. V.,      %
+%       Benson, D. A., and Huntington, G. T., "A Unified Framework %
+%        for the Numerical Solution of Optimal Control Problems    %
+%       Using Pseudospectral Methods," Automatica, Vol. 46, No. 11 %
+%       November 2010, pp. 1843-1851.                              %
+%                                                                  %
+%------------------------------------------------------------------%
+% THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,  %
+% EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES  %
+% OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND         %
+% NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT      %
+% HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,     %
+% WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING     %
+% FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR    %
+% OTHER DEALINGS IN THE SOFTWARE.                                  %
+%------------------------------------------------------------------%
+%!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!%
+% THIS NOTICE MAY NOT BE DELETED UNDER CIRCUMSTANCES DURING ANY    %
+% EXECUTION OF THE GPOPS SOFTWARE OR TRANSMITTAL OF GPOPS OR ANY   %
+% DOCUMENTATION ASSOCIATED WITH GPOPS                              %
+%!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!%
+%------------------------------------------------------------------%

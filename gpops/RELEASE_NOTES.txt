@@ -1,0 +1,38 @@
+ ______________________________________________________
+|     GPOPS:  A General-Purpose MATLAB Software        |
+| for Solving Multiple-Phase Nonlinear Optimal Control |
+|  Problems Using hp-Adaptive Pseudospectral Methods   |
+|            Version 1.0:  1 October 2008              |
+|            Version 2.0:  2 February 2009             |
+|            Version 2.1: 18 February 2009             |
+|            Version 2.2: 25 March 2009                |
+|            Version 2.4: 16 September 2009            |
+|            Version 3.0: 23 March 2010                |
+|            Version 4.0:  8 March 2011                |
+|            Version 4.1: 13 September 2011            |
+|            Version 5.0:  1 October 2012              |
+|            Version 5.1:  1 October 2012              |
+|                                                      |
+|                     Anil V. Rao                      |
+|  Department of Mechanical and Aerospace Engineering  |
+|               University of Florida                  |
+|             Gainesville, FL 32611-6250               |
+|    E-mail: anilvrao@ufl.edu or anilvrao@gmail.com    |
+|                                                      |
+|                     David A. Benson                  |
+|       The Charles Stark Draper Laboratory, Inc.      |
+|                 555 Technology Square                |
+|             Cambridge, Massachusetts 02139           |
+|               E-mail: dbenson@draper.com             |
+|______________________________________________________|
+
+GPOPS is a general-purpose MATLAB software for solving multiple-phase
+nonlinear optimal control controls.  While the user interface in this
+release of GPOPS, Version 5.x, is identical to that of version 4.x, 
+the mesh refinement method has been changed substantially.  In addition,
+the automatic scaling method has been modified.   These changes have led to
+a much more efficient software when compared with version 4.x.  As always, 
+we hope that you find GPOPS useful on your problem of interest.  If you 
+require any assistance learning how to use the software, please do not
+hesitate to contact either of the primary authors of the software at the 
+e-mail addresses shown above.  
