@@ -33,3 +33,5 @@ Run Step4_ProbAfter.m
 ### Result 4:
 A plot of the collision probability after taking the avoidance strategy.
 
+<img src="https://github.com/ZiquanDeng/Collision-Probability-Calculation-and-Optimal-Avoidance-Control-for-Spacecraft/blob/main/ECH%20Plots/Control.svg">
+
